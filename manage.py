@@ -53,6 +53,7 @@ def calculate():
 		amt=Text(root,width=26,height=19,font=("fontawesome",15,"italic"),borderwidth=5)
 		aText=f"                        Your Bill\n\nDate    :  {dat}\nDay     :  {tdat}\nTime  :  {current_time}\n------------------------------------------------\n\nTea\t-\t${a}\nCoffee\t-\t${b}\nPizza\t-\t${c}\nBurger\t-\t${d}\nSandwich\t-\t${e}\n\n------------------------------------------------\nTax(3%)\t-\t${tax}\n\nTotal\t-\t${total}"
 		amt.insert(END,aText)
+		amt.config(state=DISABLED)
 		amt.place(x=460,y=130)
 		def save_as():
 			root.filename = filedialog.asksaveasfile(mode="w",defaultextension='.txt')
